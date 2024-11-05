@@ -10,7 +10,7 @@ function StudentList(props) {
     };
 
     getData();
-  }, []);
+  });
   return (
     <section className="StudentList">
       {studentList.map((stu, index) => {
