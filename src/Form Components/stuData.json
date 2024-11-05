@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Srivasan",
+    "role": "Developer",
+    "email": "srivasan@gmail.com",
+    "phoneNumber": "123-456-7890",
+    "course": "React Basics",
+    "curStatus": "Placed"
+  },
+  {
+    "name": "Mohanapriya",
+    "role": "Designer",
+    "email": "mohanapriya@gmail.com",
+    "phoneNumber": "098-765-4321",
+    "course": "UI/UX Design",
+    "curStatus": "Unplaced"
+  },
+  {
+    "name": "Lokesh",
+    "role": "Designer",
+    "email": "Lokesh@gmail.com",
+    "phoneNumber": "098-765-4321",
+    "course": "UI/UX Design",
+    "curStatus": "Unplaced"
+  },
+  {
+    "name": "Rajesh",
+    "role": "Developer",
+    "email": "Rajesh@gmail.com",
+    "phoneNumber": "123-456-7890",
+    "course": "React Basics",
+    "curStatus": "Placed"
+  },
+  {
+    "name": "Wazeer",
+    "role": "Designer",
+    "email": "Wazeer@gmail.com",
+    "phoneNumber": "098-765-4321",
+    "course": "UI/UX Design",
+    "curStatus": "Unplaced"
+  },
+  {
+    "name": "hema chithra",
+    "role": "Developer",
+    "email": "hemachithra@gmail.com",
+    "phoneNumber": "123-456-7890",
+    "course": "React Basics",
+    "curStatus": "Placed"
+  },
+  {
+    "name": "jenitraj",
+    "role": "Designer",
+    "email": "jenitraj@gmail.com",
+    "phoneNumber": "098-765-4321",
+    "course": "UI/UX Design",
+    "curStatus": "Unplaced"
+  },
+  {
+    "name": "Nandha kumar",
+    "role": "Developer",
+    "email": "Nandhakumar@gmail.com",
+    "phoneNumber": "123-456-7890",
+    "course": "React Basics",
+    "curStatus": "Placed"
+  },
+  {
+    "name": "Dharani",
+    "role": "Designer",
+    "email": "Dharani@gmail.com",
+    "phoneNumber": "098-765-4321",
+    "course": "UI/UX Design",
+    "curStatus": "Unplaced"
+  },
+  {
+    "name": "Sriram",
+    "role": "Designer",
+    "email": "Sriram@gmail.com",
+    "phoneNumber": "098-765-4321",
+    "course": "UI/UX Design",
+    "curStatus": "placed"
+  }
+]

@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import "./App.css";
+import Footer from "./Footer";
+import FormPage from "./Form Components/FormPage";
+import Header from "./Header";
+import Home from "./Home Components/Home";
+import { Route, Routes } from "react-router-dom";
+import stuData from "./Form Components/stuData.json";
 
 function App() {
+  useEffect(() => {
+    const storeData = () => {
+      localStorage.setItem("stuDataList", JSON.stringify(stuData));
+    };
+
+    storeData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/form" element={<FormPage />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
