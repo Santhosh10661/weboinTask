@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Form(props) {
-  let { studentDetails, setStudentDetails, handleChange, handleSubmit } = props;
+  let { studentDetails, handleChange, handleSubmit } = props;
 
   return (
     <form action="">
