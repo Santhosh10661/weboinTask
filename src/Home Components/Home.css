@@ -43,7 +43,7 @@
   text-transform: none;
   color: rgb(75 85 99);
 }
-.headerSecContent a {
+.getStartBtn {
   display: inline-block;
   border-radius: 9999px;
   color: black;

@@ -1,5 +1,6 @@
 import React from "react";
 import BackgroundImg from "../Assets/img/Background Hero.svg";
+import { NavLink } from "react-router-dom";
 
 function HomeHeader() {
   return (
@@ -12,7 +13,8 @@ function HomeHeader() {
             Give yourself an upgrade with our inspiring online courses and join
             a global community of learners
           </p>
-          <a href="" >get started</a>
+
+          <NavLink to="/" className="getStartBtn">get started</NavLink>
         </div>
       </div>
     </header>
