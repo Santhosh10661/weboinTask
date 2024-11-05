@@ -9,15 +9,14 @@ import stuData from "./Form Components/stuData.json";
 
 function App() {
   useEffect(() => {
-    const storeData = () => {
+    const storeData = async () => {
       localStorage.setItem("stuDataList", JSON.stringify(stuData));
     };
 
     storeData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log("yes");
-
+  console.log("yes1111");
   return (
     <div className="App">
       <Header />

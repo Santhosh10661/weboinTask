@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function StudentList(props) {
   let { studentList, setStudentList } = props;
+  useEffect(() => {
+    const getData = async () => {
+      let list = localStorage.getItem("stuDataList");
+      setStudentList(await JSON.parse(list));
+    };
 
-  const getData = async () => {
-    let list = await localStorage.getItem("stuDataList");
-    setStudentList(await JSON.parse(list));
-  };
-
-  getData();
-  console.log("yescbfdfbd");
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  console.log("yes2222");
   return (
     <section className="StudentList">
       {studentList.map((stu, index) => {
