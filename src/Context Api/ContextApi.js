@@ -1,10 +1,8 @@
 import React, { createContext } from "react";
 import { DataProvider } from "./DataContext";
+const ContextApi = createContext({});
 
-const AllContext = createContext({});
-
-export const AllContextProvider = ({ children }) => {
+export const ContextApiProvider = ({ children }) => {
   return <DataProvider>{children}</DataProvider>;
 };
-
-export default AllContext;
+export default ContextApi;

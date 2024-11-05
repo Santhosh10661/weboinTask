@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import DataContext from "../Context Api/DataContext";
 
 function Counter() {
-  const counts = [
-    { title: "total students", nfs: 0 },
-    { title: "placed students", nfs: 0 },
-    { title: "unplaced students", nfs: 0 },
-  ];
+  const { counts, studentList } = useContext(DataContext);
+
+  useEffect(() => {
+    // const total = studentList.filter(
+    //   (stu) => stu.curStatus === "Placed" && stu
+    // );
+    // console.log(studentList);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <section className="counterSection">
       <div className="counterConBox">

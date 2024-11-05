@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
+import DataContext from "../Context Api/DataContext";
 
-function Form(props) {
-  let { studentDetails, handleChange, handleSubmit } = props;
+function Form() {
+  const { studentList, setStudentList, studentDetails, setStudentDetails } =
+    useContext(DataContext);
+
+  const handleChange = (e) => {
+    let { name, value } = e.target;
+
+    setStudentDetails((curDetails) => {
+      return { ...curDetails, [name]: value };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStudentList((curList) => {
+      return [...curList, studentDetails];
+    });
+    localStorage.setItem(
+      "stuDataList",
+      JSON.stringify([...studentList, studentDetails])
+    );
+    setStudentDetails({
+      name: "",
+      role: "",
+      email: "",
+      phoneNumber: "",
+      course: "",
+      curstatus: "",
+    });
+  };
 
   return (
     <form action="">
@@ -44,7 +73,7 @@ function Form(props) {
             type="text"
             name="phNo"
             placeholder="Enter your phone number"
-            value={studentDetails.phNo}
+            value={studentDetails.phoneNumber}
             onChange={handleChange}
           />
         </div>
@@ -63,7 +92,7 @@ function Form(props) {
         </div>
         <div className="inputBox ">
           <label>Status:</label>
-          <select name="curstatus" id="curstatus" onChange={handleChange}>
+          <select name="curStatus" id="curStatus" onChange={handleChange}>
             <option value="Unplaced">Unplaced</option>
             <option value="Placed">Placed</option>
           </select>

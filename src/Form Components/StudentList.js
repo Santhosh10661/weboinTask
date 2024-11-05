@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import DataContext from "../Context Api/DataContext";
 
-function StudentList(props) {
-  let { studentList, setStudentList } = props;
+function StudentList() {
+  const { studentList, setStudentList } = useContext(DataContext);
+
   useEffect(() => {
     const getData = async () => {
       let list = localStorage.getItem("stuDataList");
@@ -11,7 +13,7 @@ function StudentList(props) {
     getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log("yes2222");
+
   return (
     <section className="StudentList">
       {studentList.map((stu, index) => {
@@ -32,7 +34,7 @@ function StudentList(props) {
               </p>
               <p>
                 <strong>Phone Number: </strong>
-                {stu.phNo}
+                {stu.phoneNumber}
               </p>
               <p>
                 <strong>Course: </strong>

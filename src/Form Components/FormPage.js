@@ -1,51 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./FormPage.css";
 import Form from "./Form";
 import StudentList from "./StudentList";
+import DataContext from "../Context Api/DataContext";
 
 function FormPage() {
-  const [studentList, setStudentList] = useState([]);
-  const [studentDetails, setStudentDetails] = useState({
-    name: "",
-    role: "",
-    email: "",
-    phNo: "",
-    course: "",
-    curstatus: "",
-  });
-
-  const handleChange = (e) => {
-    let { name, value } = e.target;
-
-    setStudentDetails((curDetails) => {
-      return { ...curDetails, [name]: value };
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStudentList((curList) => {
-      return [...curList, studentDetails];
-    });
-    setStudentDetails({
-      name: "",
-      role: "",
-      email: "",
-      phNo: "",
-      course: "",
-      curstatus: "",
-    });
-  };
-
+  const { studentList } = useContext(DataContext);
   return (
     <div className="formPage">
-      <Form
-        studentDetails={studentDetails}
-        setStudentDetails={setStudentDetails}
-        handleChange={handleChange}
-        handleSubmit={handleSubmit}
-      />
-      <StudentList studentList={studentList} setStudentList={setStudentList} />
+      <Form />
+      {studentList && <StudentList />}
     </div>
   );
 }

@@ -10,13 +10,21 @@ import stuData from "./Form Components/stuData.json";
 function App() {
   useEffect(() => {
     const storeData = async () => {
-      localStorage.setItem("stuDataList", JSON.stringify(stuData));
+      let storedData = await localStorage.getItem("stuDataList");
+      if (!storedData) {
+        localStorage.setItem("stuDataList", JSON.stringify(stuData));
+      }
+      // let filter = JSON.parse(storedData).filter(
+      //   (stu) => stu.curStatus === "Placed"
+      // );
+
+      // console.log(filter);
     };
 
     storeData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log("yes1111");
+
   return (
     <div className="App">
       <Header />
