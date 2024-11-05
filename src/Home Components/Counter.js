@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import DataContext from "../Context Api/DataContext";
 
 function Counter() {
-  const { counts, studentList } = useContext(DataContext);
+  const { counts } = useContext(DataContext);
 
   useEffect(() => {
     // const total = studentList.filter(
