@@ -1,16 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 function StudentList(props) {
   let { studentList, setStudentList } = props;
 
-  useEffect(() => {
-    const getData = async () => {
-      let list = await localStorage.getItem("stuDataList");
-      setStudentList(await JSON.parse(list));
-    };
+  const getData = async () => {
+    let list = await localStorage.getItem("stuDataList");
+    setStudentList(await JSON.parse(list));
+  };
 
-    getData();
-  });
+  getData();
+  console.log("yescbfdfbd");
   return (
     <section className="StudentList">
       {studentList.map((stu, index) => {

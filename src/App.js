@@ -16,6 +16,8 @@ function App() {
     storeData();
   }, []);
 
+  console.log("yes");
+
   return (
     <div className="App">
       <Header />

@@ -7,12 +7,17 @@ function Header() {
       <div style={{ padding: "0 1rem" }}>
         <div className="apphead">
           <div>
-            <NavLink to="/">
-              <h1>learnHub</h1>
-            </NavLink>
+            <span>
+              <NavLink to="/">
+                <h1>learnHub</h1>
+              </NavLink>
+            </span>
           </div>
+
           <div>
-            <NavLink to="/form">admin</NavLink>
+            <span>
+              <NavLink to="/form">admin</NavLink>
+            </span>
           </div>
         </div>
       </div>
