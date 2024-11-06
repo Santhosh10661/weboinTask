@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import DataContext from "../Context Api/DataContext";
 
-function Form() {
+function Form(props) {
+  const { updateCount } = props;
   const { studentList, setStudentList, studentDetails, setStudentDetails } =
     useContext(DataContext);
 
@@ -30,6 +31,8 @@ function Form() {
       course: "",
       curstatus: "",
     });
+
+    updateCount();
   };
 
   return (

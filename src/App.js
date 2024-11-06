@@ -12,6 +12,8 @@ function App() {
   const { setStudentList, setCounts } = useContext(DataContext);
   useEffect(() => {
     const storeData = async () => {
+      console.log("yesss");
+
       let storedData = await localStorage.getItem("stuDataList");
 
       const updateCount = (list) => {
@@ -32,12 +34,12 @@ function App() {
         let data = localStorage.getItem("stuDataList");
         let stuList = await JSON.parse(data);
         setStudentList(stuList);
-        // console.log("stuList", stuList);
+
         updateCount(stuList);
       } else {
         let stuList = await JSON.parse(storedData);
         setStudentList(stuList);
-        // console.log("sd", stuList);
+
         updateCount(stuList);
       }
     };

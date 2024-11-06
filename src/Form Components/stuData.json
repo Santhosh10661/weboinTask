@@ -16,6 +16,14 @@
     "curStatus": "Unplaced"
   },
   {
+    "name": "kasi",
+    "role": "Developer",
+    "email": "kasi@gmail.com",
+    "phoneNumber": "123-456-7890",
+    "course": "React Basics",
+    "curStatus": "Placed"
+  },
+  {
     "name": "Lokesh",
     "role": "Designer",
     "email": "Lokesh@gmail.com",
@@ -77,6 +85,6 @@
     "email": "Sriram@gmail.com",
     "phoneNumber": "098-765-4321",
     "course": "UI/UX Design",
-    "curStatus": "placed"
+    "curStatus": "Placed"
   }
 ]

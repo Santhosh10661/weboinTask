@@ -1,18 +1,16 @@
 import React, { useContext } from "react";
 import DataContext from "../Context Api/DataContext";
 
-function StudentList() {
-  const { studentList } = useContext(DataContext);
+function StudentList(props) {
+  const { updateCount } = props;
+  const { studentList, setStudentList } = useContext(DataContext);
 
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     let list = localStorage.getItem("stuDataList");
-  //     setStudentList(await JSON.parse(list));
-  //   };
-
-  //   getData();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  const handleDelete = (stu) => {
+    let newList = studentList.filter((s, index) => index !== stu);
+    setStudentList(newList);
+    localStorage.setItem("stuDataList", JSON.stringify(newList));
+    updateCount();
+  };
 
   return (
     <section className="StudentList">
@@ -34,7 +32,7 @@ function StudentList() {
               </p>
               <p>
                 <strong>Phone Number: </strong>
-                {stu.phoneNumber}
+                {stu.phNo}
               </p>
               <p>
                 <strong>Course: </strong>
@@ -46,7 +44,12 @@ function StudentList() {
                 {stu.curStatus}
               </p>
             </div>
-            <button className="StuListDelBtn">Delete</button>
+            <button
+              className="StuListDelBtn"
+              onClick={() => handleDelete(index)}
+            >
+              Delete
+            </button>
           </div>
         );
       })}

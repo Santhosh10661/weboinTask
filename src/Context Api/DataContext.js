@@ -16,9 +16,7 @@ export const DataProvider = ({ children }) => {
     totalStudents: 0,
     placedStudents: 0,
     unplacedStudents: 0,
-    // { title: "total students", nfs: 0 },
-    // { title: "placed students", nfs: 0 },
-    // { title: "unplaced students", nfs: 0 },
+    
   });
   return (
     <DataContext.Provider
