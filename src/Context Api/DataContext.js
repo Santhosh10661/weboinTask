@@ -12,11 +12,14 @@ export const DataProvider = ({ children }) => {
     course: "",
     curStatus: "",
   });
-  const [counts, setCounts] = useState([
-    { title: "total students", nfs: 0 },
-    { title: "placed students", nfs: 0 },
-    { title: "unplaced students", nfs: 0 },
-  ]);
+  const [counts, setCounts] = useState({
+    totalStudents: 0,
+    placedStudents: 0,
+    unplacedStudents: 0,
+    // { title: "total students", nfs: 0 },
+    // { title: "placed students", nfs: 0 },
+    // { title: "unplaced students", nfs: 0 },
+  });
   return (
     <DataContext.Provider
       value={{

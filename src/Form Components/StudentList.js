@@ -1,18 +1,18 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import DataContext from "../Context Api/DataContext";
 
 function StudentList() {
-  const { studentList, setStudentList } = useContext(DataContext);
+  const { studentList } = useContext(DataContext);
 
-  useEffect(() => {
-    const getData = async () => {
-      let list = localStorage.getItem("stuDataList");
-      setStudentList(await JSON.parse(list));
-    };
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     let list = localStorage.getItem("stuDataList");
+  //     setStudentList(await JSON.parse(list));
+  //   };
 
-    getData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //   getData();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   return (
     <section className="StudentList">

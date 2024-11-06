@@ -187,7 +187,7 @@
   padding-top: 0px;
 }
 .counterHeading h1 {
-  font-size: 0.875rem;
+  font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.25;
   margin: 0;
@@ -228,6 +228,13 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0px, 1fr));
   gap: 1.5rem;
+}
+.count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .countTitle {
   font-size: 0.875rem;
@@ -282,7 +289,7 @@
   }
   .counterHeadp2 {
     font-size: 2.25rem;
-    line-height: 2.5;
+    line-height: 2.5rem;
   }
   .counterConSec {
     margin-top: 6rem;

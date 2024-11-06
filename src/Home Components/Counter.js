@@ -1,16 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import DataContext from "../Context Api/DataContext";
 
 function Counter() {
   const { counts } = useContext(DataContext);
-
-  useEffect(() => {
-    // const total = studentList.filter(
-    //   (stu) => stu.curStatus === "Placed" && stu
-    // );
-    // console.log(studentList);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <section className="counterSection">
@@ -39,24 +31,18 @@ function Counter() {
               Join us, learn with confidence, and watch your skills soar.
             </p>
             <div className="countBox">
-              {counts.map((count, index) => {
-                return (
-                  <div
-                    className="count"
-                    key={index}
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      textAlign: "center",
-                    }}
-                  >
-                    <span className="countTitle">{count.title}</span>
-                    <p className="nfc">{count.nfs}</p>
-                  </div>
-                );
-              })}
+              <div className="count">
+                <span className="countTitle">total students</span>
+                <p className="nfc">{counts.totalStudents}</p>
+              </div>
+              <div className="count">
+                <span className="countTitle">placed students</span>
+                <p className="nfc">{counts.placedStudents}</p>
+              </div>
+              <div className="count">
+                <span className="countTitle">unplaced students</span>
+                <p className="nfc">{counts.unplacedStudents}</p>
+              </div>
             </div>
           </div>
         </div>
